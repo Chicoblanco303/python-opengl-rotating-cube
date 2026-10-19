@@ -37,3 +37,9 @@ python main.py
 - Drawing wireframe objects
 - Using OpenGL transformations
 - Creating a graphics loop with Pygame
+
+  
+## Screenshot
+
+![Rotating 3D Cube](rotating-cube.png)
+
