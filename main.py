@@ -4,7 +4,6 @@ from pygame.locals import *
 from OpenGL.GL import *
 from OpenGL.GLU import *
 
-# Cube vertices (index 0-7) from the vertex table
 vertices = (
     (1, 1, 1),     # 0
     (1, 1, -1),    # 1
@@ -16,7 +15,6 @@ vertices = (
     (-1, 1, -1),   # 7
 )
 
-# Cube edges A-L from the edge table
 edges = (
     (0, 1), (1, 2), (2, 3), (3, 0),   # A, B, C, D
     (4, 7), (7, 5), (5, 6), (6, 4),   # E, F, G, H
@@ -36,7 +34,7 @@ pygame.init()
 
 display = (800, 600)
 pygame.display.set_mode(display, DOUBLEBUF | OPENGL)
-pygame.display.set_caption("03 Lab 1 - Shintaro Braza")  # <-- replace with your full name
+pygame.display.set_caption("03 Lab 1 - Shintaro Braza")  
 
 gluPerspective(45, (display[0] / display[1]), 0.1, 50.0)
 glTranslatef(0, 0, -5)
@@ -47,8 +45,8 @@ while True:
             pygame.quit()
             quit()
 
-    glRotatef(1, 1, 1, 1)                                # before glClear()
+    glRotatef(1, 1, 1, 1)                               
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-    draw_cube()                                          # after glClear()
+    draw_cube()                                          
     pygame.display.flip()
     pygame.time.wait(15)
